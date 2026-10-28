@@ -23,7 +23,7 @@ import subprocess
 import sys
 import time
 
-BLENDER = "/Applications/Blender.app/Contents/MacOS/Blender"
+BLENDER = os.environ.get("BLENDER", "/Applications/Blender.app/Contents/MacOS/Blender")
 SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cabeza.py")
 BASE = os.path.expanduser("~/Movies/cabeza3d")
 
