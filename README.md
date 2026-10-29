@@ -13,7 +13,9 @@
 
 <br>
 
-<img src="docs/assets/pipeline.png" width="900" alt="Two input lanes, a bust built from the actor's photo through Meshy, and a cloned voice from the film audio through WhisperX and Voicebox, both feeding a headless Blender render, then export and a hand edit into a 30-second 9:16 ad." />
+<img src="docs/assets/taxista.gif" width="300" alt="The finished ad: a 3D bust of the taxi-driver character turns and speaks, with the Harakiri title spinning around it on a white background." />
+
+<sub>One of the finished ads: the 3D bust of a character turns and speaks in the actor's own voice.</sub>
 
 </div>
 
@@ -24,6 +26,8 @@ A small, local pipeline I built to make the vertical ads for *Harakiri, Me Haces
 We had no marketing budget, so I treated the ads like a production line. One config per ad, the same inputs always give the same render, and every step can be redone on its own without breaking the rest.
 
 ## The pipeline
+
+<img src="docs/assets/pipeline.png" width="900" alt="Two input lanes: a bust built from the actor's photo through Meshy, and a cloned voice from the film audio through WhisperX and Voicebox, both feeding a headless Blender render, then export and a hand edit into a 30-second 9:16 ad." />
 
 1. **Bust.** A photo of the actor goes into Meshy, which gives back a textured `.glb`.
 2. **Voice.** I transcribed the whole film with WhisperX, searched the transcript for each character's best lines, and cut clean references with FFmpeg. Voicebox clones the voice locally, so new lines sound like the actor without anyone going back to a studio.
